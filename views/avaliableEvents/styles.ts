@@ -42,8 +42,15 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#C6C6C6",
   },
-  data: { color: "#FF5100", fontSize: 24 },
-  hora: { color: "#FF5100", fontSize: 24 },
+  eventCards: {
+    marginTop: 30,
+  },
+  semMaisEventos: {
+    color: "#FFFFFF",
+    fontSize: 12,
+    opacity: 0.5,
+    textAlign: "center",
+  }
 });
 
 export default styles;
