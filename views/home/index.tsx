@@ -14,7 +14,7 @@ export default function Home() {
           Olá, Dev <Text style={styles.exclamacao}>!</Text>
         </Text>
         <Text style={styles.subtitle}>
-          Encontre o seu <Text style={styles.orangeBackground}>próximo</Text>{" "}
+          Encontre o seu <Text style={styles.orangeBackground}> próximo </Text>{" "}
           evento de programação!
         </Text>
         <SvgUri style={styles.person} uri={personSvg} />

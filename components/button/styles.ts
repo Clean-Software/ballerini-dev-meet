@@ -7,11 +7,7 @@ const styles = (size: number, backgroundColor?: string) =>
       borderRadius: 16,
       padding: 6,
       marginTop: 40,
-    },
-    buttonLogo: {
-      height: size,
-      width: size,
-    },
+    }
   });
 
 export default styles;
