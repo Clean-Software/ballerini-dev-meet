@@ -3,7 +3,7 @@ import styles from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
 
-import { arrowOrangeSvg } from "./../../assets/CDN/svg";
+import { arrowOrangeSvg } from "./../../assets/CDN/";
 
 import { SvgUri } from 'react-native-svg';
 
