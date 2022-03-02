@@ -13,7 +13,6 @@ export default StyleSheet.create({
     fontWeight: "bold",
     alignSelf: "flex-start",
     color: "#FFFFFF",
-    fontFamily: "Ubuntu-Bold",
   },
   subtitle: {
     marginTop: 30,
@@ -21,7 +20,6 @@ export default StyleSheet.create({
     fontWeight: "normal",
     alignSelf: "flex-start",
     color: "#C6C6C6",
-    fontFamily: "Ubuntu-Regular",
   },
   exclamacao: {
     color: "#FF5100",
