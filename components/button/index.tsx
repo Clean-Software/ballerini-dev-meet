@@ -1,4 +1,5 @@
-import { Image, TouchableOpacity } from "react-native";
+import { TouchableOpacity } from "react-native";
+import { SvgUri } from "react-native-svg";
 import styles from "./styles";
 
 interface ButtonProps { 
@@ -14,12 +15,7 @@ const Button = ({ onPress, image, backgroundColor, size = 40 }: ButtonProps) => 
       style={styles(size, backgroundColor).button}
       onPress={onPress}
     >
-      <Image
-        style={styles(size, backgroundColor).buttonLogo}
-        source={{
-          uri: image,
-        }}
-      />
+      <SvgUri style={styles(size, backgroundColor).buttonLogo} uri={image} />
     </TouchableOpacity>
   );
 };
