@@ -5,8 +5,7 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: "#282828",
     alignItems: "center",
-    padding: 28,
-    paddingVertical: 50,
+    padding: 30,
     justifyContent: "center",
   },
   title: {
@@ -14,7 +13,6 @@ export default StyleSheet.create({
     fontWeight: "bold",
     alignSelf: "flex-start",
     color: "#FFFFFF",
-    fontFamily: "Ubuntu-Bold",
   },
   subtitle: {
     marginTop: 30,
@@ -22,7 +20,6 @@ export default StyleSheet.create({
     fontWeight: "normal",
     alignSelf: "flex-start",
     color: "#C6C6C6",
-    fontFamily: "Ubuntu-Regular",
   },
   exclamacao: {
     color: "#FF5100",
@@ -35,15 +32,5 @@ export default StyleSheet.create({
   person: {
     width: 277,
     height: 380,
-  },
-  button: {
-    backgroundColor: "#FF5100",
-    borderRadius: 16,
-    padding: 6,
-    marginTop: 40,
-  },
-  buttonLogo: {
-    height: 40,
-    width: 40,
   },
 });
