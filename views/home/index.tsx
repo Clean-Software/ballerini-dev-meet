@@ -1,4 +1,5 @@
-import { Text, View, Image, TouchableHighlight, SafeAreaView } from "react-native";
+import { Text, View, Image } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { person, arrowWhite } from "../../assets/CDN";
 import Button from "../../components/button";
 import Navbar from "../../components/navbar";

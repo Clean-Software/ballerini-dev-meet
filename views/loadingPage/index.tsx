@@ -1,5 +1,6 @@
 import React from "react";
-import { SafeAreaView, Image } from "react-native";
+import { Image } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { MotiImage } from "moti";
 import { LOGO, Pattern } from "../../assets/CDN";
 import styles from "./styles";
