@@ -2,20 +2,22 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
-    alignContent: "center",
-    justifyContent: "center",
-    backgroundColor: "#55585B",
-    width: "100%",
-    height: "100%",
-  },
-  logo: {
-    display: "flex",
+    flex: 1,
+    backgroundColor: "#282828",
     alignItems: "center",
+    padding: 30,
     justifyContent: "center",
+    position: "relative"
   },
-  linesPattern: {},
-  image: {},
+  pattern: {
+    position: "absolute",
+    width: 272,
+    height: 552
+  },
+  image: {
+    width: 161,
+    height: 77,
+  },
 });
 
 export default styles;
