@@ -10,6 +10,8 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo-google-fonts/epilogue": "^0.2.2",
+    "@expo-google-fonts/rajdhani": "^0.2.2",
     "@react-navigation/native": "^6.0.8",
     "@react-navigation/native-stack": "^6.5.0",
     "expo": "~44.0.0",
