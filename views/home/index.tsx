@@ -1,6 +1,7 @@
-import { Text, View, Image } from "react-native";
+import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { person, arrowWhite } from "../../assets/CDN";
+import { SvgUri } from "react-native-svg";
+import { personSvg, arrowWhiteSvg } from "../../assets/CDN";
 import Button from "../../components/button";
 import Navbar from "../../components/navbar";
 import styles from "./styles";
@@ -16,15 +17,10 @@ export default function Home() {
           Encontre o seu <Text style={styles.orangeBackground}>próximo</Text>{" "}
           evento de programação!
         </Text>
-        <Image
-          style={styles.person}
-          source={{
-            uri: person,
-          }}
-        />
+        <SvgUri style={styles.person} uri={personSvg} />
       </View>
       <Navbar />
-      <Button image={arrowWhite} backgroundColor="#FF5100" />
+      <Button image={arrowWhiteSvg} backgroundColor="#FF5100" />
     </SafeAreaView>
   );
 }
