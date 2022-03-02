@@ -2,6 +2,9 @@ import { Text, View, Image, TouchableHighlight } from "react-native";
 import styles from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
+
+import { arrowOrange } from "./../../assets/CDN";
+
 import { SvgUri } from 'react-native-svg';
 
 interface EventCardProps {
@@ -41,10 +44,12 @@ const eventCard = (props : EventCardProps) => {
             {props.author}
           </Text>
         </View>
-        <Image source={{
-          uri: 'https://res.cloudinary.com/dcy5jian9/image/upload/v1646193820/Arrow-Orange_s7p9mz.png'
-        }}
-        style={styles.arrow} />
+        <View>
+          <SvgUri 
+            style={styles.arrow}
+            uri={arrowOrange}
+          />
+        </View>
       </View>
     </View>
   );
