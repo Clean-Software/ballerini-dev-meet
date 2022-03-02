@@ -35,14 +35,4 @@ export default StyleSheet.create({
     width: 277,
     height: 380,
   },
-  button: {
-    backgroundColor: "#FF5100",
-    borderRadius: 16,
-    padding: 6,
-    marginTop: 40,
-  },
-  buttonLogo: {
-    height: 40,
-    width: 40,
-  },
 });
