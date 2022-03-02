@@ -11,39 +11,42 @@ const styles = StyleSheet.create({
   top: {
     display: "flex",
     flexDirection: "row",
+    // alignItems: "center",
   },
   data: {
     color: "#FF5100",
     fontSize: 16,
-    fontWeight: "bold"
+    fontFamily: "Rajdhani-Bold"
   },
   line: {
     color: "#282828",
     marginHorizontal: 4,
     fontSize: 16,
-    fontWeight: "bold"
+    fontFamily: "Rajdhani-Bold"
   },
   hora: {
     color: "#FF5100",
     fontSize: 16,
-    fontWeight: "600"
+    fontFamily: "Rajdhani-Medium"
   },
   title: {
     fontSize: 20,
-    marginTop: 8,
-    fontWeight: "700",
+    marginTop: 4,
+    fontFamily: "Epilogue-Bold"
   },
   description: {
-    fontSize: 10,
+    fontSize: 14,
+    lineHeight: 18,
     color: "#959595",
-    marginTop: 8,
+    marginTop: 4,
+    fontFamily: "Epilogue-Regular"
   },
   organizadoPor: {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginTop: 8,
+    marginTop: 4,
   },
   organizadoPorLeft: {
     display: "flex",
@@ -52,15 +55,15 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   organizadoPorText: {
-    fontSize: 8,
+    fontSize: 10,
     color: "#282828",
-    fontWeight: "600",
+    fontFamily: "Epilogue-Medium"
   },
   organizadoPorNome: {
     marginLeft: 4,
-    fontSize: 8,
+    fontSize: 10,
     color: "#282828",
-    fontWeight: "bold",
+    fontFamily: "Epilogue-Bold"
   },
   arrow: {
     width: 30,
