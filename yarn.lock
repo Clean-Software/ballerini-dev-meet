@@ -1061,6 +1061,16 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@expo-google-fonts/epilogue@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/epilogue/-/epilogue-0.2.2.tgz#cdf63fa3dc718753170b610d4df0c954b2b17082"
+  integrity sha512-NYQEFGXDHoeRZ+gqqbwTEwyOY/qW2imYPzqO+YKxw4y5nHBwMU5yI2izlT+gbduH8T+Tu1jgh8IR9HmqUdpJUQ==
+
+"@expo-google-fonts/rajdhani@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/rajdhani/-/rajdhani-0.2.2.tgz#ebe83c0610c6d49b5344f9441ca13a23f4bbe6be"
+  integrity sha512-Zl4OxXmyPo8jqJJAv0bbKzAT1A/LuxMinABxAqUmFT8QXoNXkAifY/mnGCqx4DL03gbOemjdYlfLvsvbIkvP/g==
+
 "@expo/config-plugins@4.0.18", "@expo/config-plugins@^4.0.2":
   version "4.0.18"
   resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-4.0.18.tgz#80cf6a3aed83e78f714ad097d80e5a7cca48591a"
