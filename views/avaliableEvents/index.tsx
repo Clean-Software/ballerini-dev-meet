@@ -1,9 +1,12 @@
 import { View, Text, TouchableHighlight, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import EventCard from "../../components/eventCard";
+import { useNavigation } from "@react-navigation/native";
 import styles from "./styles";
 
 export default function EventPage() {
+  const navigation = useNavigation();
+    
   return (
     <SafeAreaView style={styles.globalView}>
       <View style={styles.topbar}>
@@ -18,7 +21,9 @@ export default function EventPage() {
           </Text>
         </View>
 
-        <TouchableHighlight  underlayColor='transparent' onPress={() => {}}>
+        <TouchableHighlight  underlayColor='transparent' onPress={() => {
+          navigation.goBack();
+        }}>
           <View style={styles.botaoVoltar}>
             <Image style={styles.iconBotao} source={{
               uri: 'https://res.cloudinary.com/dcy5jian9/image/upload/v1646193820/Arrow-White_vapvlb.png'

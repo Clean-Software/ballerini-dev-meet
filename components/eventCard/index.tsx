@@ -3,7 +3,7 @@ import styles from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
 
-import { arrowOrange } from "./../../assets/CDN";
+import { arrowOrangeSvg } from "./../../assets/CDN/svg";
 
 import { SvgUri } from 'react-native-svg';
 
@@ -47,7 +47,7 @@ const eventCard = (props : EventCardProps) => {
         <View>
           <SvgUri 
             style={styles.arrow}
-            uri={arrowOrange}
+            uri={arrowOrangeSvg}
           />
         </View>
       </View>
