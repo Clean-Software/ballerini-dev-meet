@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import SkeletonLoading from "../../components/SkeletonLoading";
 import { IEventCardProps, IEventPost } from "../../@types/event";
 import styles from "./styles";
+import Topbar from "../../components/Topbar";
 
 
 var meses = [
@@ -29,13 +30,15 @@ export default function AvaliableEvents() {
 
   // TODO: Refactor this useEffect
   useEffect(() => {
-    axios.get("https://min.gitcdn.link/cdn/Ballerini-Server/dev-meet-backend/main/events.json").then(res => {
+    axios.get("https://gitcdn.link/cdn/Ballerini-Server/dev-meet-backend/main/events.json").then(res => {
       const eventsRaw = res.data["events"] as IEventPost[];
       const sorttedEventsRaw =  eventsRaw.sort((a, b) => {
         return new Date(a.dataInicio).getTime() - new Date(b.dataInicio).getTime();
       });
-      const events: IEventCardProps[] = sorttedEventsRaw.map((event: any) => {
+      const events: IEventCardProps[] = sorttedEventsRaw.map((event) => {
         const date = new Date(event.dataInicio);
+        const createdAt = new Date(event.dataPublicacao).getTime();
+
         return {
           data: `${String(date.getDate()).padStart(2, "0")}/${String(
             meses[date.getMonth()]
@@ -49,7 +52,8 @@ export default function AvaliableEvents() {
           description: event.descricao,
           author: event.organizador,
           link: event.link,
-          timestamp: event.timestamp,
+          timestamp: date.getTime(),
+          createdAt,
         };
       });
       setEvents(events);
@@ -59,20 +63,10 @@ export default function AvaliableEvents() {
   return (
     <SafeAreaView style={styles.safeView}>
       <ScrollView style={styles.globalView}>
-        <View style={styles.topbar}>
-          <View style={styles.top}>
-            <Text style={styles.title}>
-              Eventos{"\n"}
-              disponíveis
-            </Text>
-            <GoBackButton />
-          </View>
-          <View>
-            <Text style={styles.subtitle}>
-              Selecione o evento desejado.{"\n"}E espere sua data!
-            </Text>
-          </View>
-        </View>
+        <Topbar
+          title={`Eventos\ndisponíveis`}
+          description={`Selecione o evento desejado.\nE espere sua data!`}
+        />
         <SkeletonLoading
           isLoading={!events.length}
           length={4}
@@ -80,10 +74,7 @@ export default function AvaliableEvents() {
         >
           <View style={styles.eventCards}>
             {events.map((event) => (
-              <EventCard
-                key={event.title}
-                {...event}
-              />
+              <EventCard key={event.title} {...event} />
             ))}
           </View>
         </SkeletonLoading>

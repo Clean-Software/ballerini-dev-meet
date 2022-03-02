@@ -7,16 +7,18 @@ interface IEventCardProps {
     
   link?: string;
   timestamp?: number;
+  createdAt?: number;
 }
 
 interface IEventPost {
-    id: string;
-    tipoId: number;
-    dataInicio: string;
-    descricao: string;
-    link: string;
-    organizador: string;
-    titulo: string;
+  id: string;
+  tipoId: number;
+  dataInicio: string;
+  dataPublicacao: string;
+  descricao: string;
+  link: string;
+  organizador: string;
+  titulo: string;
 }
 
 export type { IEventCardProps, IEventPost };

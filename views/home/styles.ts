@@ -25,7 +25,7 @@ export default StyleSheet.create({
     fontSize: 24,
     alignSelf: "flex-start",
     color: "#C6C6C6",
-    fontFamily: "Epilogue-Regular"
+    fontFamily: "Epilogue-Regular",
   },
   exclamacao: {
     color: "#FF5100",
@@ -37,5 +37,5 @@ export default StyleSheet.create({
   },
   person: {
     width: "100%",
-  },
+  }
 });

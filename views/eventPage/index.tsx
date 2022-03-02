@@ -8,6 +8,7 @@ import styles from "./styles";
 import GoBackButton from "../../components/goBackButton";
 import type { IEventCardProps } from "../../@types/event";
 import * as Clipboard from 'expo-clipboard';
+import { Feather } from "@expo/vector-icons"; 
 
 interface EventPagePropsInterface {
   route: {
@@ -49,7 +50,7 @@ export default function EventPage({ route } : EventPagePropsInterface) {
 
     const timestamp_future = event.timestamp;
     const now = new Date().getTime();
-    const createdAt = 1646135530000;
+    const createdAt = event.createdAt;
 
     var delta = Math.abs(timestamp_future - now) / 1000;
 
@@ -101,12 +102,19 @@ export default function EventPage({ route } : EventPagePropsInterface) {
         <View style={styles.evento}>
           <Text style={styles.eventText}>Link do evento</Text>
           <View style={styles.linkView}>
-            <TouchableOpacity style={styles.linkText} onPress={handleCopyLinkClick}>
+            <TouchableOpacity
+              style={styles.linkText}
+              onPress={handleCopyLinkClick}
+            >
               <Text style={styles.linkText}>{event.link}</Text>
             </TouchableOpacity>
             <View style={styles.buttons}>
               <ButtonGo
-                image={arrowOrangeSvg}
+                icon={{
+                  type: Feather,
+                  name: "bell",
+                  color: "#FFFFFF",
+                }}
                 size={19}
                 backgroundColor={"rgba(255, 255, 255, 0.2)"}
                 style={{ borderRadius: 8 }}
@@ -128,38 +136,55 @@ export default function EventPage({ route } : EventPagePropsInterface) {
                 fontFamily: "Rajdhani-Bold",
                 color: "#fff",
                 fontSize: 25,
+                display: countdownDate.percentage < 100 ? "flex" : "none",
               }}
             >
               Tempo até o evento
             </Text>
-            <View style={styles.time}>
-              <View style={{ display: "flex", flexDirection: "row" }}>
-                <Text style={styles.number}>{countdownDate.days}</Text>
-                <View style={{ alignSelf: "center" }}>
-                  <Text style={styles.label}>DAY(s)</Text>
-                </View>
-              </View>
+            <View style={styles.contentInner}>
+              {countdownDate.percentage < 100 ? (
+                <View style={styles.time}>
+                  <View style={{ display: "flex", flexDirection: "row" }}>
+                    <Text style={styles.number}>{countdownDate.days}</Text>
+                    <View style={{ alignSelf: "center" }}>
+                      <Text style={styles.label}>DAY(s)</Text>
+                    </View>
+                  </View>
 
-              <View style={{ display: "flex", flexDirection: "row" }}>
-                <Text style={styles.number}>{countdownDate.hours}</Text>
-                <View style={{ alignSelf: "center" }}>
-                  <Text style={styles.label}>HOURS(s)</Text>
-                </View>
-              </View>
+                  <View style={{ display: "flex", flexDirection: "row" }}>
+                    <Text style={styles.number}>{countdownDate.hours}</Text>
+                    <View style={{ alignSelf: "center" }}>
+                      <Text style={styles.label}>HOURS(s)</Text>
+                    </View>
+                  </View>
 
-              <View style={{ display: "flex", flexDirection: "row" }}>
-                <Text style={styles.number}>{countdownDate.minutes}</Text>
-                <View style={{ alignSelf: "center" }}>
-                  <Text style={styles.label}>MIN(s)</Text>
+                  <View style={{ display: "flex", flexDirection: "row" }}>
+                    <Text style={styles.number}>{countdownDate.minutes}</Text>
+                    <View style={{ alignSelf: "center" }}>
+                      <Text style={styles.label}>MIN(s)</Text>
+                    </View>
+                  </View>
                 </View>
-              </View>
+              ) : (
+                <>
+                  <Text style={styles.eventIsHappening}>
+                    O Evento já está rolando! 🎉
+                  </Text>
+                </>
+              )}
             </View>
           </View>
           <View style={styles.parentBarView}>
-            <View style={[styles.sonBarView, {
-              width: `${countdownDate.percentage}%`,
-              backgroundColor: countdownDate.percentage < 100 "#FF5100",
-            }]}></View>
+            <View
+              style={[
+                styles.sonBarView,
+                {
+                  width: `${countdownDate.percentage}%`,
+                  backgroundColor:
+                    countdownDate.percentage < 100 ? "#FF5100" : "#04D361",
+                },
+              ]}
+            ></View>
           </View>
         </View>
       </ScrollView>
