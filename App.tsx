@@ -1,12 +1,30 @@
-import AppLoading from "expo-app-loading";
-import { useCustomFonts } from "./helpers";
+import { useState } from "react";
 import Routes from "./navigation";
+import { LoadingPage } from "./views";
+import { useEffect } from "react";
+
+const fetchLoading = async  () => {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
+  return;
+};
 
 export default function App() {
-  const fontLoaded = useCustomFonts();
+  const [appLoaded, setAppLoaded] = useState(false);
 
-  if (!fontLoaded) {
-    return <AppLoading />;
+  const prepare = async () => {
+    await fetchLoading();
+    setAppLoaded(true);
+  };
+
+  useEffect(() => {
+    prepare();
+  }, []);
+
+  if (!appLoaded) {
+    return (
+      <LoadingPage />
+    );
   }
 
   return <Routes />;
