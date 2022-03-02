@@ -1,7 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { ChooseEvent, EventPage, Home, LoadingPage } from "../views";
+import { ChooseEvent, EventPage, Home, LoadingPage, AvaliableEvents } from "../views";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +17,7 @@ function Routes() {
         <Stack.Screen name="LoadingPage" component={LoadingPage} />
         <Stack.Screen name="EventPage" component={EventPage} />
         <Stack.Screen name="ChooseEvent" component={ChooseEvent} />
+        <Stack.Screen name="AvaliableEvents" component={AvaliableEvents} />
       </Stack.Navigator>
     </NavigationContainer>
   );
