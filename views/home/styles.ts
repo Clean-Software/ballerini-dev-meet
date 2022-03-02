@@ -5,21 +5,27 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: "#282828",
     alignItems: "center",
-    padding: 30,
     justifyContent: "center",
+  },
+  content: {
+    width: "80%",
+    height: "70%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-around",
   },
   title: {
     fontSize: 40,
-    fontWeight: "bold",
     alignSelf: "flex-start",
     color: "#FFFFFF",
+    fontFamily: "Epilogue-Bold",
   },
   subtitle: {
-    marginTop: 30,
+    marginTop: 24,
     fontSize: 24,
-    fontWeight: "normal",
     alignSelf: "flex-start",
     color: "#C6C6C6",
+    fontFamily: "Epilogue-Regular"
   },
   exclamacao: {
     color: "#FF5100",
@@ -30,7 +36,6 @@ export default StyleSheet.create({
     color: "#FFFFFF",
   },
   person: {
-    width: 277,
-    height: 380,
+    width: "100%",
   },
 });

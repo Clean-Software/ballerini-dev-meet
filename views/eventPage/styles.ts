@@ -4,84 +4,84 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#282828",
     display: "flex",
-    flex: 1
+    flex: 1,
   },
-  globalView: { 
-    margin: 35, 
-    },
+  globalView: {
+    padding: 35,
+  },
   topbar: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  datahora: {},
-  data: { 
-    color: "#FF5100", 
-    fontSize: 24 
+  data: {
+    color: "#FF5100",
+    fontSize: 24,
+    fontFamily: "Rajdhani-Bold",
   },
-  hora: { 
-    color: "#FF5100", 
-    fontSize: 24 
-  },
-  textoBotao: {
-    fontSize: 18,
-    color: "#fff"
+  hora: {
+    color: "#FF5100",
+    fontSize: 24,
+    fontFamily: "Rajdhani-Medium",
   },
   viewCentral: {
-    marginTop: 40
+    marginTop: 40,
   },
   textoCentral: {
-    fontSize: 32, 
-    textAlign: "auto", 
-    fontWeight: "bold",
-    color: "#fff"
+    fontSize: 32,
+    textAlign: "auto",
+    color: "#fff",
+    fontFamily: "Epilogue-Bold",
   },
   infoCentral: {
-    marginTop: 20, 
-    color: "#959595", 
-    lineHeight: 27, 
-    fontSize: 14
+    marginTop: 20,
+    color: "#959595",
+    lineHeight: 27,
+    fontSize: 14,
+    fontFamily: "Epilogue-Regular",
   },
   byView: {
-    display: "flex", 
-    flexDirection: "row", 
-    marginTop: 20
+    display: "flex",
+    flexDirection: "row",
+    marginTop: 20,
   },
   byText: {
     fontSize: 13,
-    color: "#fff"
+    color: "#fff",
+    fontFamily: "Epilogue-Medium",
   },
   name: {
-    fontSize: 13, 
-    fontWeight: "bold",
-    color: "#fff"
+    fontSize: 13,
+    color: "#fff",
+    fontFamily: "Epilogue-Bold",
   },
   evento: {
-    display: "flex", 
-    alignItems: "center", 
+    display: "flex",
+    alignItems: "center",
     marginTop: 45,
   },
   eventText: {
-    fontSize: 28, 
-    fontWeight: "bold",
-    color: "#fff"
+    fontSize: 28,
+    color: "#fff",
+    fontFamily: "Epilogue-Bold",
   },
   linkView: {
-    backgroundColor: "#323232", 
-    borderRadius: 4, 
-    display: "flex", 
-    flexDirection: "row", 
+    backgroundColor: "#323232",
+    borderRadius: 4,
+    display: "flex",
+    flexDirection: "row",
     justifyContent: "space-between",
-    alignSelf: "stretch", 
-    marginTop: 20, 
-    height: 50
+    alignSelf: "stretch",
+    marginTop: 20,
+    height: 50,
   },
   
   linkText: {
-    color: 'rgba(255, 255, 255, 0.7)', 
-    fontSize: 16, 
-    marginLeft: 14, 
-    alignSelf: "center"
+    color: "rgba(255, 255, 255, 0.7)",
+    fontSize: 16,
+    marginLeft: 14,
+    alignSelf: "center",
+    fontFamily: "Rajdhani-Bold",
   },
   buttons: {
     display: "flex",
@@ -89,60 +89,40 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     width: 70,
     margin: 20,
-    alignItems: "center"
-  },
-  notificacoes: {
-    
+    alignItems: "center",
   },
   btnNotificacao: {
     borderRadius: 6,
-    width: 28, 
+    width: 28,
     height: 28,
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    alignSelf: "center"
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
+    alignSelf: "center",
   },
   linkSvg: {
     width: 25,
     height: 25,
-    margin: 0
+    margin: 0,
   },
   goToLink: {
-    margin: 0
+    margin: 0,
   },
   btnGo: {
     borderRadius: 6,
-    width: 28, 
+    width: 28,
     height: 28,
-    backgroundColor: 'rgba(4, 211, 97, 0.2)',
-    alignSelf: "center"
+    backgroundColor: "rgba(4, 211, 97, 0.2)",
+    alignSelf: "center",
   },
   progressContainerView: {
-    marginTop: 100
-  },
-  progressText: {
-
+    marginTop: 50,
+    marginBottom: 70,
   },
   parentBarView: {
     height: 12,
     backgroundColor: "#3C3C3C",
     borderRadius: 5,
     marginTop: 14,
-    position: "relative"
-  },
-  iconBotao: {
-    width: 25,
-    height: 25,
-    transform: [
-      {
-        rotate: "180deg"
-      }
-    ],
-  },
-  botaoVoltar: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    alignItems: "center",
+    position: "relative",
   },
   sonBarView: {
     position: "absolute",
@@ -151,27 +131,27 @@ const styles = StyleSheet.create({
     bottom: 0,
     width: "50%",
     backgroundColor: "#FF5100",
-    borderRadius: 5 
+    borderRadius: 5,
   },
   time: {
     display: "flex",
     flexDirection: "row",
     color: "#fff",
     justifyContent: "space-between",
-    marginTop: 17
+    marginTop: 16,
   },
   number: {
-    fontWeight: "bold",
     color: "#fff",
-    fontSize: 59,
-
+    fontSize: 40,
+    fontFamily: "Rajdhani-Bold",
   },
   label: {
     color: "#fff",
-    fontSize: 16,
+    fontSize: 12,
     opacity: 0.5,
-    marginLeft: 4
-  }
+    marginLeft: 4,
+    fontFamily: "Epilogue-Medium",
+  },
 });
 
 export default styles;

@@ -1,15 +1,16 @@
-import { Text, View, Image, TouchableHighlight } from "react-native";
+import { Text, View, TouchableHighlight } from "react-native";
 import styles from "./styles";
 import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 const Navbar = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NativeStackNavigationProp<any, any>>();
 
   return (
     <View style={styles.container}>
       <TouchableHighlight
         onPress={() => {
-          navigation.navigate("LoadingPage" as any);
+          navigation.navigate("LoadingPage");
         }}
       >
         <View>
@@ -18,7 +19,7 @@ const Navbar = () => {
       </TouchableHighlight>
       <TouchableHighlight
         onPress={() => {
-          navigation.navigate("EventPage" as any);
+          navigation.navigate("EventPage");
         }}
       >
         <View>
@@ -27,7 +28,7 @@ const Navbar = () => {
       </TouchableHighlight>
       <TouchableHighlight
         onPress={() => {
-          navigation.navigate("ChooseEvent" as any);
+          navigation.navigate("ChooseEvent");
         }}
       >
         <View>
@@ -36,7 +37,7 @@ const Navbar = () => {
       </TouchableHighlight>
       <TouchableHighlight
         onPress={() => {
-          navigation.navigate("AvaliableEvents" as any);
+          navigation.navigate("AvaliableEvents");
         }}
       >
         <View>

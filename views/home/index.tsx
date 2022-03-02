@@ -9,15 +9,17 @@ import styles from "./styles";
 export default function Home() {
   return (
     <SafeAreaView style={styles.container}>
-      <View>
-        <Text style={styles.title}>
-          Olá, Dev <Text style={styles.exclamacao}>!</Text>
-        </Text>
-        <Text style={styles.subtitle}>
-          Encontre o seu <Text style={styles.orangeBackground}> próximo </Text>{" "}
-          evento de programação!
-        </Text>
-        <SvgUri style={styles.person} uri={personSvg} />
+      <View style={styles.content}>
+        <View>
+          <Text style={styles.title}>
+            Olá, Dev <Text style={styles.exclamacao}>!</Text>
+          </Text>
+          <Text style={styles.subtitle}>
+            Encontre o seu{"\n"}<Text style={styles.orangeBackground}> próximo </Text>{" "}
+            evento de{"\n"}programação!
+          </Text>
+        </View>
+        <SvgUri width={"100%"} uri={personSvg} />
       </View>
       <Navbar />
       <Button image={arrowWhiteSvg} backgroundColor="#FF5100" style={{ marginTop: 40 }} />
