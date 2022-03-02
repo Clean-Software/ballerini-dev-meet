@@ -2,6 +2,7 @@ import { useState } from "react";
 import Routes from "./navigation";
 import { LoadingPage } from "./views";
 import { useEffect } from "react";
+import { StatusBar } from "expo-status-bar";
 
 const fetchLoading = async  () => {
   await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -27,5 +28,10 @@ export default function App() {
     );
   }
 
-  return <Routes />;
+  return (
+    <>
+      <StatusBar style="light" />
+      <Routes />
+    </>
+  );
 }
