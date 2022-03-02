@@ -1,8 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
 import { View, Text, TouchableHighlight } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import styles from "./styles";
 
 export default function EventPage() {
+  const navigation = useNavigation()
   return (
     <SafeAreaView style={styles.globalView}>
       <View style={styles.topbar}>
@@ -10,7 +12,7 @@ export default function EventPage() {
           <Text style={styles.data}>02/MAR</Text>
           <Text style={styles.hora}>19:00</Text>
         </View>
-        <TouchableHighlight onPress={() => {}}>
+        <TouchableHighlight onPress={() => {navigation.goBack()}}>
           <View style={styles.botaoVoltar}>
             <Text style={styles.textoBotao}>Voltar</Text>
           </View>
