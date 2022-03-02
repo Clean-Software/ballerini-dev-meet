@@ -123,14 +123,13 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginTop: 14,
     position: "relative",
+    overflow: "hidden",
   },
   sonBarView: {
     position: "absolute",
     left: 0,
     top: 0,
     bottom: 0,
-    width: "50%",
-    backgroundColor: "#FF5100",
     borderRadius: 5,
   },
   time: {
