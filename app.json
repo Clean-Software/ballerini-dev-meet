@@ -1,5 +1,13 @@
 {
-    "name": "Ballerini Meet",
-    "version": "1.0.0",
-    "backgroundColor": "#282828"
+    "expo": {
+        "name": "Ballerini Dev Meet",
+        "backgroundColor": "#282828",
+        "owner": "luiz_e_amigos",
+        "version": "1.0.0",
+        "slug": "ballerini-dev-meet",
+        "android": {
+            "package": "com.luizeamigos.ballerinidevmeet",
+            "versionCode": 1
+        }
+    }
 }
