@@ -20,7 +20,7 @@ export default function Home() {
         <SvgUri style={styles.person} uri={personSvg} />
       </View>
       <Navbar />
-      <Button image={arrowWhiteSvg} backgroundColor="#FF5100" />
+      <Button image={arrowWhiteSvg} backgroundColor="#FF5100" style={{ marginTop: 40 }} />
     </SafeAreaView>
   );
 }

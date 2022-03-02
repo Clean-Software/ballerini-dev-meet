@@ -23,9 +23,7 @@ export default function App() {
   }, []);
 
   if (!appLoaded) {
-    return (
-      <LoadingPage />
-    );
+    return <LoadingPage />;
   }
 
   return (

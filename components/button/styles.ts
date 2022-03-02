@@ -5,8 +5,7 @@ const styles = (size: number, backgroundColor?: string) =>
     button: {
       backgroundColor,
       borderRadius: 16,
-      padding: 6,
-      marginTop: 40,
+      padding: 6
     }
   });
 
