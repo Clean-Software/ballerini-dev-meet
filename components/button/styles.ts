@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const styles = (backgroundColor?: string) =>
+const styles = (size: number, backgroundColor?: string) =>
   StyleSheet.create({
     button: {
       backgroundColor,
@@ -9,8 +9,8 @@ const styles = (backgroundColor?: string) =>
       marginTop: 40,
     },
     buttonLogo: {
-      height: 40,
-      width: 40,
+      height: size,
+      width: size,
     },
   });
 

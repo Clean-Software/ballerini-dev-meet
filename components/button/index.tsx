@@ -5,16 +5,17 @@ interface ButtonProps {
     image: string;
     onPress?: () => void;
     backgroundColor?: string;
+    size?: number;
 }
 
-const Button = ({ onPress, image, backgroundColor }: ButtonProps) => {
+const Button = ({ onPress, image, backgroundColor, size = 40 }: ButtonProps) => {
   return (
     <TouchableHighlight
-      style={styles(backgroundColor).button}
+      style={styles(size, backgroundColor).button}
       onPress={onPress}
     >
       <Image
-        style={styles(backgroundColor).buttonLogo}
+        style={styles(size, backgroundColor).buttonLogo}
         source={{
           uri: image,
         }}
