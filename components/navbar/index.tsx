@@ -34,6 +34,15 @@ const Navbar = () => {
           <Text>ChooseEvent</Text>
         </View>
       </TouchableHighlight>
+      <TouchableHighlight
+        onPress={() => {
+          navigation.navigate("AvaliableEvents" as any);
+        }}
+      >
+        <View>
+          <Text>avaliableEvents</Text>
+        </View>
+      </TouchableHighlight>
     </View>
   );
 };

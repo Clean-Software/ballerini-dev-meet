@@ -12,5 +12,7 @@ web-build/
 yarn.lock
 yarn-error.log
 
+yarn.lock
+
 # macOS
 .DS_Store

@@ -15,7 +15,7 @@ const Button = ({ onPress, image, backgroundColor, size = 40 }: ButtonProps) => 
       style={styles(size, backgroundColor).button}
       onPress={onPress}
     >
-      <SvgUri style={styles(size, backgroundColor).buttonLogo} uri={image} />
+      <SvgUri width={size} height={size} uri={image} />
     </TouchableOpacity>
   );
 };
