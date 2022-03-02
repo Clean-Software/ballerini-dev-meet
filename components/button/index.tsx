@@ -1,4 +1,4 @@
-import { View, Image, TouchableHighlight } from "react-native";
+import { Image, TouchableOpacity } from "react-native";
 import styles from "./styles";
 
 interface ButtonProps { 
@@ -10,7 +10,7 @@ interface ButtonProps {
 
 const Button = ({ onPress, image, backgroundColor, size = 40 }: ButtonProps) => {
   return (
-    <TouchableHighlight
+    <TouchableOpacity
       style={styles(size, backgroundColor).button}
       onPress={onPress}
     >
@@ -20,7 +20,7 @@ const Button = ({ onPress, image, backgroundColor, size = 40 }: ButtonProps) => 
           uri: image,
         }}
       />
-    </TouchableHighlight>
+    </TouchableOpacity>
   );
 };
 
