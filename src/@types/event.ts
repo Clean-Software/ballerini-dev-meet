@@ -1,13 +1,14 @@
 interface IEventCardProps {
+  id: string;
   data: string;
-  hora: string;
+  time: string;
   title: string;
   description: string;
   author: string;
-    
-  link?: string;
-  timestamp?: number;
-  createdAt?: number;
+
+  link: string;
+  timestamp: number;
+  createdAt: number;
 }
 
 interface IEventPost {

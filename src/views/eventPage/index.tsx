@@ -2,13 +2,15 @@ import { View, Text, ScrollView, ToastAndroid, TouchableOpacity } from "react-na
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useEffect, useState } from "react";
 import ButtonGo from "../../components/button"
-import {arrowWhiteSvg, arrowOrangeSvg} from "../../assets/CDN/svg"
+import {arrowWhiteSvg } from "../../assets/CDN/svg"
 
 import styles from "./styles";
 import GoBackButton from "../../components/goBackButton";
 import type { IEventCardProps } from "../../@types/event";
 import * as Clipboard from 'expo-clipboard';
 import { Feather } from "@expo/vector-icons"; 
+import { ICountdown } from "../../@types/date";
+import { getCountdown } from "../../utils/date";
 
 interface EventPagePropsInterface {
   route: {
@@ -18,22 +20,10 @@ interface EventPagePropsInterface {
   };
 }
 
-interface ICountdownProps { 
-  days: string;
-  hours: string;
-  minutes: string;
-  percentage: number;
-}
-
 export default function EventPage({ route } : EventPagePropsInterface) {
   const [event, setEvent] = useState<IEventCardProps>({} as IEventCardProps);
 
-  const [countdownDate, setCountdownDate] = useState<ICountdownProps>({
-    days: "00",
-    hours: "00",
-    minutes: "00",
-    percentage: 0,
-  });
+  const [countdownDate, setCountdownDate] = useState<ICountdown | undefined>();
 
   const copyToClipboard = (url : string) => {
     Clipboard.setString(url);
@@ -48,29 +38,9 @@ export default function EventPage({ route } : EventPagePropsInterface) {
     const { event } = route.params;
     setEvent(event);
 
-    const timestamp_future = event.timestamp;
-    const now = new Date().getTime();
-    const createdAt = event.createdAt;
+    const countdown = getCountdown(new Date(event.createdAt), new Date(event.timestamp));
 
-    var delta = Math.abs(timestamp_future - now) / 1000;
-
-    var days = Math.floor(delta / 86400);
-    delta -= days * 86400;
-
-    var hours = Math.floor(delta / 3600) % 24;
-    delta -= hours * 3600;
-
-    var minutes = Math.floor(delta / 60) % 60;
-    delta -= minutes * 60;
-    
-    var percentage = -(((createdAt - now) / ( timestamp_future - createdAt)) * 100);
-
-    setCountdownDate({
-      days: `${String(days).padStart(2, "0")}`,
-      hours: `${String(hours).padStart(2, "0")}`,
-      minutes: `${String(minutes).padStart(2, "0")}`,
-      percentage,
-    });
+    setCountdownDate(countdown);
   };
 
   useEffect(() => {
@@ -81,13 +51,17 @@ export default function EventPage({ route } : EventPagePropsInterface) {
     return () => clearInterval(coutdownInterval);
   }, []);
 
+  if (!countdownDate) {
+    return null;
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.globalView}>
         <View style={styles.topbar}>
           <View>
             <Text style={styles.data}>{event.data}</Text>
-            <Text style={styles.hora}>{event.hora}</Text>
+            <Text style={styles.hora}>{event.time}</Text>
           </View>
           <GoBackButton />
         </View>

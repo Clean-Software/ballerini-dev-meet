@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
   data: {
     color: "#FF5100",
     fontSize: 16,
-    fontFamily: "Rajdhani-Bold"
+    fontFamily: "Rajdhani-Bold",
+    textTransform: "uppercase",
   },
   line: {
     color: "#282828",

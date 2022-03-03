@@ -22,7 +22,7 @@ const eventCard = (props: IEventCardProps) => {
         <View style={styles.top}>
           <Text style={styles.data}>{props.data}</Text>
           <Text style={styles.line}>-</Text>
-          <Text style={styles.hora}>{props.hora}</Text>
+          <Text style={styles.hora}>{props.time}</Text>
         </View>
         <Text style={styles.title}>{props.title}</Text>
         <Text style={styles.description} numberOfLines={3}>

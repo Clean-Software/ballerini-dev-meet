@@ -1,13 +1,14 @@
 {
     "expo": {
-        "name": "Ballerini Dev Meet",
-        "backgroundColor": "#282828",
-        "owner": "luiz_e_amigos",
-        "version": "1.0.0",
-        "slug": "ballerini-dev-meet",
-        "android": {
-            "package": "com.luizeamigos.ballerinidevmeet",
-            "versionCode": 1
-        }
+      "name": "Ballerini Dev Meet",
+      "backgroundColor": "#282828",
+      "owner": "luiz_e_amigos",
+      "version": "1.0.0",
+      "slug": "ballerini-dev-meet",
+      "android": {
+        "package": "com.luizeamigos.ballerinidevmeet",
+        "versionCode": 1
+      },
+      "entryPoint": "./src/App.tsx"
     }
 }

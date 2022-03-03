@@ -7,8 +7,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject",
-    "serve": "json-server --port 3001 ./api/backend.json"
+    "eject": "expo eject"
   },
   "dependencies": {
     "@expo-google-fonts/epilogue": "^0.2.2",

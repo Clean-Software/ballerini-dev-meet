@@ -4,6 +4,7 @@ import { LoadingPage } from "./views";
 import { useEffect } from "react";
 import * as Font from "expo-font";
 import { StatusBar } from "expo-status-bar";
+import { registerRootComponent } from "expo";
 
 const fetchLoading = async () => {
   
@@ -26,7 +27,7 @@ const fetchLoading = async () => {
   return;
 };
 
-export default function App() {
+function App() {
   const [appLoaded, setAppLoaded] = useState(false);
 
   const prepare = async () => {
@@ -49,3 +50,5 @@ export default function App() {
     </>
   );
 }
+
+export default registerRootComponent(App);
