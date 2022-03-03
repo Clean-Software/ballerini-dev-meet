@@ -19,15 +19,6 @@ const Navbar = () => {
       </TouchableHighlight>
       <TouchableHighlight
         onPress={() => {
-          navigation.navigate("EventPage");
-        }}
-      >
-        <View>
-          <Text>EventPage</Text>
-        </View>
-      </TouchableHighlight>
-      <TouchableHighlight
-        onPress={() => {
           navigation.navigate("ChooseEvent");
         }}
       >

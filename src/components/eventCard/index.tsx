@@ -9,7 +9,7 @@ import { IEventCardProps } from "../../@types/event";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
-const eventCard = (props: IEventCardProps) => {
+const EventCard = (props: IEventCardProps) => {
   const navigation = useNavigation<NativeStackNavigationProp<any, any>>();
 
   const handleNavigate = () => {
@@ -42,4 +42,4 @@ const eventCard = (props: IEventCardProps) => {
   );
 };
 
-export default eventCard;
+export default EventCard;

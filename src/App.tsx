@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import * as Font from "expo-font";
 import { StatusBar } from "expo-status-bar";
 import { registerRootComponent } from "expo";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const fetchLoading = async () => {
   
@@ -40,14 +41,18 @@ function App() {
   }, []);
 
   if (!appLoaded) {
-    return <LoadingPage />;
+    return (
+      <SafeAreaProvider>
+        <LoadingPage />
+      </SafeAreaProvider>
+    );
   }
 
   return (
-    <>
+    <SafeAreaProvider>
       <StatusBar style="light" translucent />
       <Routes />
-    </>
+    </SafeAreaProvider>
   );
 }
 

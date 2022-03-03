@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   globalView: {
-    padding: 35,
+    padding: 30,
   },
   topbar: {
     display: "flex",

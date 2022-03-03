@@ -5,10 +5,12 @@
       "owner": "luiz_e_amigos",
       "version": "1.0.0",
       "slug": "ballerini-dev-meet",
+      "orientation": "portrait",
       "android": {
         "package": "com.luizeamigos.ballerinidevmeet",
         "versionCode": 1
       },
-      "entryPoint": "./src/App.tsx"
+      "entryPoint": "./src/App.tsx",
+      "icon": "./src/assets/static/iconzinho.png"
     }
 }
