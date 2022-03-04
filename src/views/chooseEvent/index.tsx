@@ -8,7 +8,7 @@ import { arrowWhiteSvg } from "../../assets/CDN";
 import Button from "../../components/button";
 import SkeletonLoading from "../../components/skeletonLoading";
 import TopicCard from "../../components/topicCard";
-import { Topics } from "../../services/api/topics";
+import { Topics } from "../../services/api";
 import styles from "./styles";
 
 export default function ChooseEvent() {
