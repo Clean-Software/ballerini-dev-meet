@@ -11,6 +11,7 @@ import * as Clipboard from 'expo-clipboard';
 import { Feather } from "@expo/vector-icons"; 
 import { ICountdown } from "../../@types/date";
 import { getCountdown } from "../../utils/date";
+import ToggleNotificationButton from "../../components/toggleNotificationButton";
 
 interface EventPagePropsInterface {
   route: {
@@ -83,16 +84,7 @@ export default function EventPage({ route } : EventPagePropsInterface) {
               <Text style={styles.linkText}>{event.link}</Text>
             </TouchableOpacity>
             <View style={styles.buttons}>
-              <ButtonGo
-                icon={{
-                  type: Feather,
-                  name: "bell",
-                  color: "#FFFFFF",
-                }}
-                size={19}
-                backgroundColor={"rgba(255, 255, 255, 0.2)"}
-                style={{ borderRadius: 8 }}
-              />
+             <ToggleNotificationButton />
               <ButtonGo
                 image={arrowWhiteSvg}
                 size={19}
