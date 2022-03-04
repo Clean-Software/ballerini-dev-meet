@@ -1,32 +1,16 @@
 {
-  "expo": {
-    "name": "ballerini-dev-meet",
-    "slug": "ballerini-dev-meet",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "expo": {
+      "name": "Ballerini Dev Meet",
+      "backgroundColor": "#282828",
+      "owner": "luiz_e_amigos",
+      "version": "1.1.2",
+      "slug": "ballerini-dev-meet",
+      "orientation": "portrait",
+      "android": {
+        "package": "com.luizeamigos.ballerinidevmeet",
+        "versionCode": 1
+      },
+      "entryPoint": "./src/App.tsx",
+      "icon": "./src/assets/static/iconzinho.png"
     }
-  }
 }
