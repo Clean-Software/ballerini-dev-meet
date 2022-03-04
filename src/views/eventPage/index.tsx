@@ -104,7 +104,7 @@ export default function EventPage({ route } : EventPagePropsInterface) {
             >
               Tempo até o evento
             </Text>
-            <View style={styles.contentInner}>
+            <View>
               {countdownDate.percentage < 100 ? (
                 <View style={styles.time}>
                   <View style={{ display: "flex", flexDirection: "row" }}>

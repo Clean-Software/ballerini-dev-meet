@@ -151,9 +151,6 @@ const styles = StyleSheet.create({
     marginLeft: 4,
     fontFamily: "Epilogue-Medium",
   },
-  contentInner: {
-    // display: "flex",
-  },
   eventIsHappening: {
     fontSize: 28,
     color: "#fff",

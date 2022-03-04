@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
   top: {
     display: "flex",
     flexDirection: "row",
-    // alignItems: "center",
   },
   data: {
     color: "#FF5100",
