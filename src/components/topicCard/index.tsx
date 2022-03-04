@@ -18,8 +18,8 @@ const TopicCard = ({ topic, selected, disabled, onPress }: TopicCardProps) => {
     <TouchableOpacity activeOpacity={0.8} onPress={onPress}>
       <View style={styles(selected, disabled).container}>
         <SvgUri uri={imageDicionary(selected)[topic.icon]} />
-        <Text style={styles(selected, disabled).title}>{topic.text}</Text>
-        <Text style={styles(selected, disabled).footer}>
+        <Text numberOfLines={3} style={styles(selected, disabled).title}>{topic.text}</Text>
+        <Text numberOfLines={2} style={styles(selected, disabled).footer}>
           {topic.eventsCount} evento{topic.eventsCount !== 0 && "s"}{" "}
           <Text style={styles(selected, disabled).footerFounded}>encontrados</Text>
         </Text>

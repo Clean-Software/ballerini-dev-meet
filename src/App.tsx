@@ -1,5 +1,6 @@
 import { registerRootComponent } from "expo";
 import * as Font from "expo-font";
+import * as NavigationBar from "expo-navigation-bar";
 import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -21,6 +22,8 @@ const fetchLoading = async () => {
   }
 
   await fetchFonts();
+
+  await NavigationBar.setBackgroundColorAsync("#282828");
 
   await new Promise((resolve) => setTimeout(resolve, 3000));
 
