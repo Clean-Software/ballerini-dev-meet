@@ -1,3 +1,4 @@
 import { Events } from "./events";
+import { Topics } from "./topics";
 
-export { Events };
+export { Events, Topics };

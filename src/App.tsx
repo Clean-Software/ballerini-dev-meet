@@ -1,10 +1,10 @@
-import { useState } from "react";
-import Routes from "./navigation";
-import { LoadingPage } from "./views";
-import { useEffect } from "react";
+import { registerRootComponent } from "expo";
 import * as Font from "expo-font";
 import { StatusBar } from "expo-status-bar";
-import { registerRootComponent } from "expo";
+import { useEffect, useState } from "react";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import Routes from "./navigation";
+import { LoadingPage } from "./views";
 
 const fetchLoading = async () => {
   
@@ -40,14 +40,18 @@ function App() {
   }, []);
 
   if (!appLoaded) {
-    return <LoadingPage />;
+    return (
+      <SafeAreaProvider>
+        <LoadingPage />
+      </SafeAreaProvider>
+    );
   }
 
   return (
-    <>
+    <SafeAreaProvider>
       <StatusBar style="light" translucent />
       <Routes />
-    </>
+    </SafeAreaProvider>
   );
 }
 

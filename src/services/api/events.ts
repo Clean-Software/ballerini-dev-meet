@@ -1,10 +1,10 @@
 import { IEventCardProps, IEventPost } from "../../@types/event";
 import { getFormatedDay, getFormatedTime, getShortMonth } from "../../utils/date";
-import { api } from "./base"
+import { api } from "./base";
 
 const Events = {
-    index: async () => {
-        const response = await api.get<IEventPost[]>("events");
+    index: async (topic: number) => {
+        const response = await api.get<IEventPost[]>(`events?tipoId=${topic}`);
         const eventsRaw = response.data;
 
         const events: IEventCardProps[] = eventsRaw.map((event) => {

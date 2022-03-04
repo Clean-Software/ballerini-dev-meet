@@ -1,15 +1,12 @@
-import { Text, View, TouchableOpacity } from "react-native";
-import styles from "./styles";
-
-
-import { arrowOrangeSvg } from "./../../assets/CDN/";
-
-import { SvgUri } from 'react-native-svg';
-import { IEventCardProps } from "../../@types/event";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { Text, TouchableOpacity, View } from "react-native";
+import { SvgUri } from 'react-native-svg';
+import { IEventCardProps } from "../../@types/event";
+import { arrowOrangeSvg } from "./../../assets/CDN/";
+import styles from "./styles";
 
-const eventCard = (props: IEventCardProps) => {
+const EventCard = (props: IEventCardProps) => {
   const navigation = useNavigation<NativeStackNavigationProp<any, any>>();
 
   const handleNavigate = () => {
@@ -42,4 +39,4 @@ const eventCard = (props: IEventCardProps) => {
   );
 };
 
-export default eventCard;
+export default EventCard;

@@ -1,17 +1,15 @@
-import { View, Text, ScrollView, ToastAndroid, TouchableOpacity } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { useEffect, useState } from "react";
-import ButtonGo from "../../components/button"
-import {arrowWhiteSvg } from "../../assets/CDN/svg"
-
-import styles from "./styles";
-import GoBackButton from "../../components/goBackButton";
-import type { IEventCardProps } from "../../@types/event";
 import * as Clipboard from 'expo-clipboard';
-import { Feather } from "@expo/vector-icons"; 
+import { useEffect, useState } from "react";
+import { ScrollView, Text, ToastAndroid, TouchableOpacity, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { ICountdown } from "../../@types/date";
+import type { IEventCardProps } from "../../@types/event";
+import { arrowWhiteSvg } from "../../assets/CDN/svg";
+import ButtonGo from "../../components/button";
+import GoBackButton from "../../components/goBackButton";
+import ToggleNotificationButton from "../../components/toggleNotificationButton";
 import { getCountdown } from "../../utils/date";
-
+import styles from "./styles";
 interface EventPagePropsInterface {
   route: {
     params: {
@@ -83,16 +81,7 @@ export default function EventPage({ route } : EventPagePropsInterface) {
               <Text style={styles.linkText}>{event.link}</Text>
             </TouchableOpacity>
             <View style={styles.buttons}>
-              <ButtonGo
-                icon={{
-                  type: Feather,
-                  name: "bell",
-                  color: "#FFFFFF",
-                }}
-                size={19}
-                backgroundColor={"rgba(255, 255, 255, 0.2)"}
-                style={{ borderRadius: 8 }}
-              />
+             <ToggleNotificationButton />
               <ButtonGo
                 image={arrowWhiteSvg}
                 size={19}
@@ -115,7 +104,7 @@ export default function EventPage({ route } : EventPagePropsInterface) {
             >
               Tempo até o evento
             </Text>
-            <View style={styles.contentInner}>
+            <View>
               {countdownDate.percentage < 100 ? (
                 <View style={styles.time}>
                   <View style={{ display: "flex", flexDirection: "row" }}>

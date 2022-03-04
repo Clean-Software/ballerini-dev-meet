@@ -1,5 +1,5 @@
 import { MotiView } from "moti";
-import {  StyleProp, View, ViewStyle } from "react-native";
+import { StyleProp, View, ViewStyle } from "react-native";
 import styles from "./styles";
 
 interface SkeletonLoadingProps {

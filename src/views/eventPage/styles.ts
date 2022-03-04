@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   globalView: {
-    padding: 35,
+    padding: 30,
   },
   topbar: {
     display: "flex",
@@ -150,9 +150,6 @@ const styles = StyleSheet.create({
     opacity: 0.5,
     marginLeft: 4,
     fontFamily: "Epilogue-Medium",
-  },
-  contentInner: {
-    // display: "flex",
   },
   eventIsHappening: {
     fontSize: 28,

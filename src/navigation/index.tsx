@@ -1,7 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-import { ChooseEvent, EventPage, Home, LoadingPage, AvaliableEvents } from "../views";
+import { AvaliableEvents, ChooseEvent, EventPage, Home, LoadingPage } from "../views";
 
 const Stack = createNativeStackNavigator();
 
