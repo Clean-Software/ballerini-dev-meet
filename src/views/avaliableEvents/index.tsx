@@ -7,12 +7,21 @@ import { IEventCardProps } from "../../@types/event";
 import Topbar from "../../components/topbar";
 import { Events } from "../../services/api";
 import styles from "./styles";
+import { ITopic } from "../../@types/topic";
 
-export default function AvaliableEvents() {
+interface AvaliableEventsProps { 
+  route: {
+    params: {
+      topic: ITopic;
+    }
+  }
+}
+
+export default function AvaliableEvents({ route }: AvaliableEventsProps) {
   const [events, setEvents] = useState<IEventCardProps[]>([]);
 
   useEffect(() => {
-    Events.index().then(setEvents);
+    Events.index(route.params.topic.id).then(setEvents);
   }, []);
 
   return (

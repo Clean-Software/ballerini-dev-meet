@@ -24,13 +24,32 @@ export default StyleSheet.create({
     fontFamily: "Epilogue-Regular",
     marginTop: 13,
   },
+  topicCardsScroll: {
+    width: "100%",
+    height: "70%",
+  },
   topicCards: {
     width: "100%",
     marginTop: 30,
+    paddingBottom: 40,
     display: "flex",
-    flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
     flexWrap: "wrap",
+    flex: 1,
   },
+  nextButtonView: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    paddingHorizontal: 10,
+    paddingVertical: 20
+  },
+  nextButtonText: {
+    color: "#FFFFFF",
+    fontFamily: "Epilogue-Bold",
+    fontSize: 16,
+    marginRight: 12,
+  }
 });
