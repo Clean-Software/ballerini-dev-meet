@@ -1,9 +1,9 @@
+import { MotiView } from "moti";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { MotiView } from "moti";
+import { SvgUri } from "react-native-svg";
 import { LOGOSvg, PatternSvg } from "../../assets/CDN";
 import styles from "./styles";
-import { SvgUri } from "react-native-svg";
 
 export default function LoadingPage() {
   return (

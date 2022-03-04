@@ -1,5 +1,5 @@
-import { StyleProp, View, ViewStyle, Text, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { StyleProp, Text, TouchableOpacity, View, ViewStyle } from "react-native";
 import { SvgUri } from "react-native-svg";
 import { arrowWhiteSvg } from "../../assets/CDN/svg";
 import styles from "./styles";

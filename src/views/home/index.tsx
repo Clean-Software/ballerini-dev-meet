@@ -3,7 +3,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { SvgUri } from "react-native-svg";
-import { personSvg, arrowWhiteSvg } from "../../assets/CDN";
+import { arrowWhiteSvg, personSvg } from "../../assets/CDN";
 import Button from "../../components/button";
 import styles from "./styles";
 

@@ -1,6 +1,6 @@
 import { IEventCardProps, IEventPost } from "../../@types/event";
 import { getFormatedDay, getFormatedTime, getShortMonth } from "../../utils/date";
-import { api } from "./base"
+import { api } from "./base";
 
 const Events = {
     index: async (topic: number) => {

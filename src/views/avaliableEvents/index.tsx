@@ -1,13 +1,13 @@
-import { View, Text, ScrollView } from "react-native";
+import { useEffect, useState } from "react";
+import { ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import EventCard from "../../components/eventCard";
-import { useState, useEffect } from "react";
-import SkeletonLoading from "../../components/skeletonLoading";
 import { IEventCardProps } from "../../@types/event";
+import { ITopic } from "../../@types/topic";
+import EventCard from "../../components/eventCard";
+import SkeletonLoading from "../../components/skeletonLoading";
 import Topbar from "../../components/topbar";
 import { Events } from "../../services/api";
 import styles from "./styles";
-import { ITopic } from "../../@types/topic";
 
 interface AvaliableEventsProps { 
   route: {

@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import { Feather } from '@expo/vector-icons';
+import { useState } from 'react';
 import Button from '../button';
 
 const ToggleNotificationButton = () => {

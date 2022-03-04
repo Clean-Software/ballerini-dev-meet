@@ -1,18 +1,15 @@
-import { View, Text, ScrollView, ToastAndroid, TouchableOpacity } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { useEffect, useState } from "react";
-import ButtonGo from "../../components/button"
-import {arrowWhiteSvg } from "../../assets/CDN/svg"
-
-import styles from "./styles";
-import GoBackButton from "../../components/goBackButton";
-import type { IEventCardProps } from "../../@types/event";
 import * as Clipboard from 'expo-clipboard';
-import { Feather } from "@expo/vector-icons"; 
+import { useEffect, useState } from "react";
+import { ScrollView, Text, ToastAndroid, TouchableOpacity, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { ICountdown } from "../../@types/date";
-import { getCountdown } from "../../utils/date";
+import type { IEventCardProps } from "../../@types/event";
+import { arrowWhiteSvg } from "../../assets/CDN/svg";
+import ButtonGo from "../../components/button";
+import GoBackButton from "../../components/goBackButton";
 import ToggleNotificationButton from "../../components/toggleNotificationButton";
-
+import { getCountdown } from "../../utils/date";
+import styles from "./styles";
 interface EventPagePropsInterface {
   route: {
     params: {

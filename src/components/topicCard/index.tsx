@@ -1,11 +1,10 @@
-import { Text, View, TouchableOpacity } from "react-native";
-import styles from "./styles";
-
-import { iPhoneXOrangeSvg } from "../../assets/CDN";
-
+import { Text, TouchableOpacity, View } from "react-native";
 import { SvgUri } from "react-native-svg";
 import { ITopic } from "../../@types/topic";
 import { imageDicionary } from "./helper";
+import styles from "./styles";
+
+
 
 interface TopicCardProps {
   selected?: boolean;
