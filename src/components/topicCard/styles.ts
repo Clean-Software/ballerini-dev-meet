@@ -9,6 +9,7 @@ const styles = (selected?: boolean, disabled?: boolean) =>
       borderRadius: 8,
       marginVertical: 8,
       width: Dimensions.get("window").width / 2.5,
+      minHeight: 100,
       display: "flex",
       flexDirection: "column",
       alignItems: "flex-start",
@@ -20,7 +21,7 @@ const styles = (selected?: boolean, disabled?: boolean) =>
       fontSize: 16,
       fontFamily: "Epilogue-Medium",
       marginTop: 8,
-      marginBottom: 24,
+      marginBottom: 32,
     },
     footer: {
       position: "absolute",
