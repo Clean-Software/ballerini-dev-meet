@@ -1,6 +1,6 @@
 import { Dimensions, StyleSheet } from "react-native";
 
-const styles = (selected?: boolean, disabled?: boolean) =>
+const styles = (selected?: boolean) =>
   StyleSheet.create({
     container: {
       position: "relative",
@@ -14,7 +14,6 @@ const styles = (selected?: boolean, disabled?: boolean) =>
       flexDirection: "column",
       alignItems: "flex-start",
       flexGrow: 1,
-      opacity: disabled ? 0.6 : 1,
     },
     title: {
       color: selected ? "#FFFFFF" : "#282828",

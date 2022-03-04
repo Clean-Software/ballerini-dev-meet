@@ -52,7 +52,6 @@ export default function ChooseEvent() {
                   key={topic.id}
                   topic={topic}
                   selected={selectedTopic?.id === topic.id}
-                  disabled={selectedTopic && selectedTopic.id !== topic.id}
                   onPress={() => handleSelectTopic(topic)}
                 />
               ))}
