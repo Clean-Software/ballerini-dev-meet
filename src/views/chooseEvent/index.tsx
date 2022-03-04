@@ -6,6 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { ITopic } from "../../@types/topic";
 import { arrowWhiteSvg } from "../../assets/CDN";
 import Button from "../../components/button";
+import SkeletonLoading from "../../components/skeletonLoading";
 import TopicCard from "../../components/topicCard";
 import { Topics } from "../../services/api/topics";
 import styles from "./styles";
@@ -18,6 +19,15 @@ export default function ChooseEvent() {
   useEffect(() => { 
     Topics.index().then(setTopics);
   }, []);
+
+  const handleSelectTopic = (topic: ITopic) => {
+    if (selectedTopic?.id === topic.id) {
+      setSelectedTopic(undefined);
+      return;
+    }
+    
+    setSelectedTopic(topic);
+  }
 
   const handleNext = () => {
     navigation.navigate("AvaliableEvents", { topic: selectedTopic });
@@ -34,19 +44,21 @@ export default function ChooseEvent() {
             Selecione a categoria que{`\n`}mais te agrada!
           </Text>
         </View>
-        <ScrollView style={styles.topicCardsScroll}>
-          <View style={styles.topicCards}>
-            {topics.map((topic) => (
-              <TopicCard
-                key={topic.id}
-                topic={topic}
-                selected={selectedTopic?.id === topic.id}
-                disabled={selectedTopic && selectedTopic.id !== topic.id}
-                onPress={() => setSelectedTopic(topic)}
-              />
-            ))}
-          </View>
-        </ScrollView>
+        <SkeletonLoading length={4} isLoading={!topics.length} style={{ width: '100%' }}>
+          <ScrollView style={styles.topicCardsScroll}>
+            <View style={styles.topicCards}>
+              {topics.map((topic) => (
+                <TopicCard
+                  key={topic.id}
+                  topic={topic}
+                  selected={selectedTopic?.id === topic.id}
+                  disabled={selectedTopic && selectedTopic.id !== topic.id}
+                  onPress={() => handleSelectTopic(topic)}
+                />
+              ))}
+            </View>
+          </ScrollView>
+        </SkeletonLoading>
         {selectedTopic && (
           <View style={styles.nextButtonView}>
             <Text style={styles.nextButtonText}>Próximo</Text>
