@@ -7,7 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx,.json"
   },
   "dependencies": {
     "@expo-google-fonts/epilogue": "^0.2.2",
@@ -37,6 +38,9 @@
     "@babel/core": "^7.12.9",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "eslint": "^8.13.0",
     "typescript": "~4.3.5"
   },
   "private": true
