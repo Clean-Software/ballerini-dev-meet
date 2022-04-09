@@ -23,9 +23,11 @@ const SkeletonLoading = ({
         transition={{ type: "timing", duration: 1000, loop: true }}
         style={[styles.container, style]}
       >
-        {Array.apply(null, Array(length)).map((_, index) => (
-          <View style={styles.skeletonContent} key={index} />
-        ))}
+        {Array(length)
+          .fill(undefined)
+          .map((_, index) => (
+            <View style={styles.skeletonContent} key={index} />
+          ))}
       </MotiView>
     );
   }
